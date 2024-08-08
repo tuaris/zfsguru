@@ -16,3 +16,9 @@ Use the `send` and `receive` commands to make the copy
 # Set a new mount location while we are at it
 zfs send -R MyPool/MyDataset@copy | zfs receive -o mountpoint=/mnt/dataset_copy DifferentPool/MyDataset
 ```
+
+Delete the snapshot
+
+```
+zfs destroy MyPool/Dataset@copy
+```
